@@ -1,0 +1,34 @@
+.active{
+    color:orangered;
+    text-decoration: none;
+    font-family: Tahoma, sans-serif;
+    font-size:medium;
+    padding:4px;
+}
+
+.no-active{
+    color:white;
+    text-decoration: none;
+    font-family: Tahoma, sans-serif;
+    font-size: smaller;
+    padding:4px;
+}
+
+.logo{
+    color:orangered;
+    font-family: 'Arial Narrow', sans-serif;
+    font-size:40px;
+    text-decoration: none;
+}
+
+.text-home{
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.text-login{
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.inputsz{
+    width: 100%;
+}
