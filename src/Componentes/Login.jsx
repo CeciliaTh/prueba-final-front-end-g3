@@ -11,7 +11,7 @@ const Login = () => {
       <h4 className='mt-4'>Conrtraseña</h4>
       <input type="text" placeholder='Escribe tu contraseña' className='inputsz' />
       <div className='mt-4'>
-        <Button variant="primary">Iniciar Sesión</Button>
+        <NavLink to="/"><Button variant="primary">Iniciar Sesión</Button></NavLink>
       </div>
       <p className='mt-4'>¿No estás registrado? <NavLink to="/registro">Registraté Aquí</NavLink></p>
      </div>
