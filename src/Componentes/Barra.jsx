@@ -9,26 +9,26 @@ const Barra = () => {
   const setActiveClass = ({ isActive }) => (isActive ? "active" : "no-active");
   return (
     <div>
-      <Navbar bg="dark" expand="lg">
+      <Navbar className='barra' expand="lg">
         <Container>
           <NavLink to="/"><Navbar.Brand className='logo'>BurgerTown</Navbar.Brand></NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto justify-content-between">
-              <NavLink className={setActiveClass}  to="/">
+            <Nav className="ms-auto">
+              {/* <NavLink className={setActiveClass}  to="/">
                 🍔 Inicio BurgerTown
-              </NavLink>
+              </NavLink> */}
 
               <NavLink className={setActiveClass} to="/menu">
-                📝 Menú Hamburguesas
+                 Menú Hamburguesas
               </NavLink>
 
               <NavLink className={setActiveClass} to="/perfil">
-                😀Mi Perfil
+                Mi Perfil
               </NavLink>
 
               <NavLink className={setActiveClass} to="/login">
-                🔑 Iniciar Sesion / Registrarse
+                Iniciar Sesion
               </NavLink>
             </Nav>
           </Navbar.Collapse>
