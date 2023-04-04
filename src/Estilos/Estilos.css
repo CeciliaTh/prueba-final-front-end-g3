@@ -210,6 +210,38 @@ body{
     background-color: #8f7cec;
     text-decoration: none;
 }
+
+
+.menu-container {
+
+    display: grid;
+    justify-content: center;
+    color: #ffffff;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 8%;
+    gap: 20px;
+}
+
+.card-container  {
+
+    border-radius: 18px;
+    border: 1px solid #ccc;
+    text-align: center;
+    min-width: 15rem;
+    max-width: 18rem;
+
+}
+
+.imagen {
+    width: 100%;
+    border-radius: 18px;
+}
+
+.desc {
+    height: 3rem;
+    padding: 1%;
+    font-size: small;
+}
 /* }
 .container{
     position: absolute;

@@ -25,7 +25,6 @@ function App() {
     const res = await fetch("/burgers.json");
     const data = await res.json();
     setHamburguesas(data);
-    console.log(hamburguesas)
   }
 
   useEffect(() => {
@@ -34,14 +33,14 @@ function App() {
 
   return (
     <div >
-      <MiContexto.Provider value={hamburguesas}>
+      <MiContexto.Provider value={{hamburguesas}}>
       <BrowserRouter>
       <Barra></Barra>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/perfil" element={<Perfil></Perfil>}></Route>
         <Route path="/menu" element={<MenuHamburguesas></MenuHamburguesas>}></Route>
-        <Route path="detalle/:nombre" element={<Detalle></Detalle>}></Route>
+        <Route path="detalle/:id" element={<Detalle></Detalle>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/registro" element={<Registro></Registro>}></Route>
         <Route path="*" element= {<NotFound></NotFound>}> </Route>
@@ -53,3 +52,4 @@ function App() {
 }
 
 export default App;
+
