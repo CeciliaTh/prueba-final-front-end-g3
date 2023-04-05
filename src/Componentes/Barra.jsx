@@ -27,6 +27,10 @@ const Barra = () => {
                 Mi Perfil
               </NavLink>
 
+              <NavLink className={setActiveClass} to="/carrito">
+                Carrito
+              </NavLink>
+
               <NavLink className={setActiveClass} to="/login">
                 Iniciar Sesion
               </NavLink>
