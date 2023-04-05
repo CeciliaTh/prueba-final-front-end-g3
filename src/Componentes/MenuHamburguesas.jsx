@@ -13,7 +13,7 @@ const Home = () => {
 
     <div>
       <div className="menu-container">
-        {hamburguesas.map((objeto)=>  <div>{<CardHamburguesa objeto={objeto}></CardHamburguesa>}</div>)}
+        {hamburguesas.map((burger)=>  <div key={burger.id}>{<CardHamburguesa burger={burger}></CardHamburguesa>}</div>)}
       </div>
     </div>
   )

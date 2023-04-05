@@ -9,6 +9,7 @@ import Login from "./Componentes/Login.jsx";
 import Registro from "./Views/Registro.jsx";
 import MenuHamburguesas from "./Componentes/MenuHamburguesas.jsx";
 import Detalle from "./Views/Detalle.jsx";
+import Carrito from "./Views/Carrito";
 import NotFound from "./Views/NotFound";
 import MiContexto from "./Contexto/MiContexto.jsx";
 
@@ -40,9 +41,10 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/perfil" element={<Perfil></Perfil>}></Route>
         <Route path="/menu" element={<MenuHamburguesas></MenuHamburguesas>}></Route>
-        <Route path="detalle/:id" element={<Detalle></Detalle>}></Route>
+        <Route path="/detalle/:id" element={<Detalle></Detalle>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/registro" element={<Registro></Registro>}></Route>
+        <Route path="/carrito" element={<Carrito></Carrito>}></Route>
         <Route path="*" element= {<NotFound></NotFound>}> </Route>
       </Routes>
       </BrowserRouter>
