@@ -4,26 +4,29 @@ import { NavLink } from 'react-router-dom';
 const Login = () => {
   return (
 
-    <div className='login-box'>
+    <div className='login-view'>
+      <div className='login-box'>
         <h2>Iniciar sesión</h2>
         <form>
-        <div className='user-box'>
-          <input type='text' placeholder='nombre'></input>
-        </div>
-        <div className='user-box'>
-          <input type='password' placeholder='contraseña'></input>
-        </div>
-
-        <div className='button-form'>
-          <NavLink to="/" id='submit'><button variant="primary">Iniciar Sesión</button></NavLink>
-          <div id='registrar'>
-            No te has registrado? 
-            <NavLink to="/" id='resgistrar'><button>Registrate</button></NavLink>
+          <div className='user-box'>
+            <input type='text' placeholder='nombre'></input>
           </div>
-        </div>
+          <div className='user-box'>
+            <input type='password' placeholder='contraseña'></input>
+          </div>
 
-  </form>
+          <div className='button-form'>
+            <NavLink to="/perfil" id='submit'><button variant="primary">Iniciar Sesión</button></NavLink>
+            <div id='registrar'>
+              No te has registrado?
+              <NavLink to="/registro" id='resgistrar'><button>Registrate</button></NavLink>
+            </div>
+          </div>
+
+        </form>
+      </div>
     </div>
+
 
     // <div className='p-5 bg-light text-login'>
     //   <h1>Iniciar sesión en BurgerTown</h1>

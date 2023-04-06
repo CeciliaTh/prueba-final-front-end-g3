@@ -3,12 +3,10 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='container'>
-      <h1 className="neonText">
-        Burger Town
-      </h1>
-        {/* <span class="txt">Burguer Town</span>
-        <span class="txt_gradient"></span>
-        <span class="txt_dodge"></span> */}
+      <div className='imgcontainer'>
+        <img src='1-modified.png' alt='burgertown' className='burgerhome'></img>
+      </div>
+      
     </div>
   )
 }

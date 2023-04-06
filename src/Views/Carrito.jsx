@@ -1,41 +1,34 @@
-import React from 'react'
-// import { NavLink } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { useContext } from "react"
+import MiContexto from "../Contexto/MiContexto"
 
 const Carrito = () => {
 
-return (
-    <div className='p-5'>
-      <h1 className="text-center p-4"> DETALLE DEL PEDIDO </h1>
-      <div className='bg-light m-auto p-3 border border-success justify-content-between'>
-     
-        <div className="row mb-2 pb-2" >
-          <div className="col" >
-            <h4><strong>IMAGEN</strong></h4>
-          </div>
-          <div className="col">
-            <h4><strong>NOMBRE PIZZA</strong></h4>
-          </div>
-          <div className="col">
-            <h4><strong>PRECIO UNITARIO</strong></h4>
-          </div>
-          <div className="col">
-            <h4><strong>SUBTOTAL</strong></h4>
-          </div><div className="col">
-            <h4><strong>CANTIDAD</strong></h4>
-          </div>
+  const { hamburguesas } = useContext(MiContexto);
 
+  return (
+    <div className='carrito-container'>
+      <div className="carrito-detalle" >
+        <div className="carrito-img">
+          <img src={hamburguesas[0].img} alt="imagen-hamburguesa" className="imagen"></img>
         </div>
-      
+        <p>
+          {hamburguesas[0].nombre}
+        </p>
+        <p> Precio: $ {hamburguesas[0].precio}
+        </p>
+        <p>Cantidad:</p>
+        <div className='carrito-buttons'>
+          <button>+</button>
+          <button>-</button>
+        </div>
+        <p>Total</p>
       </div>
-
-{/* Aquí va lo del carro con los datos */}
-{/* Código que está abajo y que hay que adaptar*/}
-      <h3 className='border border-success'>Total Pedido: <strong>$ Precio.-</strong></h3>
-      <Button variant="success" >Ir a pagar</Button>
     </div>
-  
- 
+
+    /* Aquí va lo del carro con los datos */
+    /* Código que está abajo y que hay que adaptar*/
+
+
   )
 
 }

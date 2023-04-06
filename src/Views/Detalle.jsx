@@ -2,46 +2,38 @@ import React from 'react'
 import { useContext } from "react"
 import { useParams } from 'react-router-dom';
 import MiContexto from "../Contexto/MiContexto";
-import { Card, Button } from 'react-bootstrap';
 
 const Detalle = () => {
- 
-const { id } = useParams();
 
-const id2 = Number(id);
-console.log (typeof id + "id")
+  const { id } = useParams();
 
-const { hamburguesas } = useContext(MiContexto);
+  const id2 = Number(id);
 
-const indBurger = hamburguesas.findIndex((indBurger) => indBurger.id === id2);
-console.log("index "+ indBurger)
-const burgerDetalle = hamburguesas[indBurger];
+  const { hamburguesas } = useContext(MiContexto);
 
-return (
-    <div >
-       <Card  border="info" className="flex-row" style={{ width: '100%', marginTop: "1em" }}>
-       <Card.Img variant="top"  src={burgerDetalle.img} style={{ width: '80%'}}/>
-  
-    <Card.Body>
-          <Card.Title><strong>{burgerDetalle.nombre}</strong></Card.Title>
-          
-          <Card.Text>
-          {burgerDetalle.desc} 
-          </Card.Text>
-                   
-          <Card.Text> Precio: $ {(burgerDetalle.precio).toLocaleString({
-            style: "currency",
-             currency: "CPL"
-        })}.-
-        </Card.Text>
-          
-          <hr></hr>
-          <div className="d-flex justify-content-end">
-          <Button variant="danger" >Añadir al carrito 🛒</Button>
-          </div>
-         
-        </Card.Body>
-      </Card>
+  const indBurger = hamburguesas.findIndex((indBurger) => indBurger.id === id2);
+  const burgerDetalle = hamburguesas[indBurger];
+
+  return (
+    <div className='detalle-container'>
+      <div className="card-detalle" >
+        <div className="cardimg-detalle">
+          <img src={burgerDetalle.img} alt="imagen-hamburguesa" className="imagen"></img>
+        </div>
+        <h4>
+          {burgerDetalle.nombre}
+        </h4>
+        <p className="desc"> {burgerDetalle.desc}</p>
+        <p> Precio: $ {burgerDetalle.precio.toLocaleString({
+          style: "currency",
+          currency: "CPL"
+        })}
+        </p>
+        <div className='buttondetalle'>
+          <button>Añadir al carrito 🍔</button>
+        </div>
+
+      </div>
     </div>
   )
 }
