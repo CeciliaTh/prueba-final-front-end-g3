@@ -1,4 +1,4 @@
-import {useContext} from "react"
+import { useContext } from "react"
 import MiContexto from "../Contexto/MiContexto"
 import CardHamburguesa from "../Componentes/CardHamburguesa.jsx"
 
@@ -6,14 +6,14 @@ import CardHamburguesa from "../Componentes/CardHamburguesa.jsx"
 
 const Home = () => {
 
-  const {hamburguesas} = useContext(MiContexto);
+  const { hamburguesas } = useContext(MiContexto);
 
 
   return (
+    <div className="container-general">
 
-    <div>
       <div className="menu-container">
-        {hamburguesas.map((burger)=>  <div key={burger.id}>{<CardHamburguesa burger={burger}></CardHamburguesa>}</div>)}
+        {hamburguesas.map((burger) => <div key={burger.id}>{<CardHamburguesa burger={burger}></CardHamburguesa>}</div>)}
       </div>
     </div>
   )

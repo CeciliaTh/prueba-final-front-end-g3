@@ -11,9 +11,9 @@ const Barra = () => {
     <div>
       <Navbar className='barra' expand="lg">
         <Container>
-          <NavLink to="/"><Navbar.Brand className='logo'>BurgerTown</Navbar.Brand></NavLink>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <NavLink to="/"><Navbar.Brand className='logo2'>BurgerTown</Navbar.Brand></NavLink>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className='navtoggle' />
+          <Navbar.Collapse id="basic-navbar-nav" className='navtoggle'>
             <Nav className="ms-auto">
               {/* <NavLink className={setActiveClass}  to="/">
                 🍔 Inicio BurgerTown

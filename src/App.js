@@ -7,6 +7,7 @@ import Barra from "./Componentes/Barra.jsx";
 import Perfil from "./Views/Perfil.jsx";
 import Login from "./Componentes/Login.jsx";
 import Registro from "./Views/Registro.jsx";
+import Footer from "./Componentes/Footer.jsx"
 import MenuHamburguesas from "./Componentes/MenuHamburguesas.jsx";
 import Detalle from "./Views/Detalle.jsx";
 import Carrito from "./Views/Carrito";
@@ -48,6 +49,7 @@ function App() {
         <Route path="*" element= {<NotFound></NotFound>}> </Route>
       </Routes>
       </BrowserRouter>
+      <Footer></Footer>
       </MiContexto.Provider>
     </div>
   );
