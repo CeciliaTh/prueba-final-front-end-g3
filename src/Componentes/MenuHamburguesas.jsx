@@ -1,6 +1,6 @@
-import { useContext } from "react"
-import MiContexto from "../Contexto/MiContexto"
-import CardHamburguesa from "../Componentes/CardHamburguesa.jsx"
+import { useContext } from "react";
+import MiContexto from "../Contexto/MiContexto";
+import CardHamburguesa from "../Componentes/CardHamburguesa.jsx";
 
 
 

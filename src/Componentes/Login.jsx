@@ -9,16 +9,16 @@ const Login = () => {
         <h2>Iniciar sesión</h2>
         <form>
           <div className='user-box'>
-            <input type='text' placeholder='nombre'></input>
+            <input type='text' placeholder='Nombre'></input>
           </div>
           <div className='user-box'>
-            <input type='password' placeholder='contraseña'></input>
+            <input type='password' placeholder='Contraseña'></input>
           </div>
 
           <div className='button-form'>
             <NavLink to="/perfil" id='submit'><button variant="primary">Iniciar Sesión</button></NavLink>
             <div id='registrar'>
-              No te has registrado?
+              ¿No te has registrado?
               <NavLink to="/registro" id='resgistrar'><button>Registrate</button></NavLink>
             </div>
           </div>
@@ -27,18 +27,6 @@ const Login = () => {
       </div>
     </div>
 
-
-    // <div className='p-5 bg-light text-login'>
-    //   <h1>Iniciar sesión en BurgerTown</h1>
-    //   <h4 className='mt-4'>Nombre de usuario:</h4>
-    //   <input type="text" placeholder='Escribe tu nombre de usuario' className='inputsz' />
-    //   <h4 className='mt-4'>Conrtraseña</h4>
-    //   <input type="text" placeholder='Escribe tu contraseña' className='inputsz' />
-    //   <div className='mt-4'>
-    //     <NavLink to="/"><Button variant="primary">Iniciar Sesión</Button></NavLink>
-    //   </div>
-    //   <p className='mt-4'>¿No estás registrado? <NavLink to="/registro">Registraté Aquí</NavLink></p>
-    //  </div>
   )
 }
 

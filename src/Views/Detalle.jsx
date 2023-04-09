@@ -9,7 +9,7 @@ const Detalle = () => {
 
   const id2 = Number(id);
 
-  const { hamburguesas } = useContext(MiContexto);
+  const { hamburguesas, agregarHamburguesa } = useContext(MiContexto);
 
   const indBurger = hamburguesas.findIndex((indBurger) => indBurger.id === id2);
   const burgerDetalle = hamburguesas[indBurger];
@@ -30,7 +30,7 @@ const Detalle = () => {
         })}
         </p>
         <div className='buttondetalle'>
-          <button>Añadir al carrito 🍔</button>
+          <button onClick={() => agregarHamburguesa(burgerDetalle)}>Añadir al carrito 🍔</button>
         </div>
 
       </div>
@@ -39,5 +39,3 @@ const Detalle = () => {
 }
 
 export default Detalle
-
-//<Button variant="danger" onClick={() => agregarPizza(pizzaDetalle)}>Añadir al carrito 🛒</Button> 

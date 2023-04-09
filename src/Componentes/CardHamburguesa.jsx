@@ -1,13 +1,18 @@
 import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import MiContexto from "../Contexto/MiContexto.jsx";
+
 
 
 const CardHamburguesa = ({ burger }) => {
 
+  const { agregarHamburguesa } = useContext(MiContexto);
   const navigate = useNavigate();
 
   const verDetalle = () => {
     navigate(`/detalle/${burger.id}`)
   }
+ 
 
   return (
     <div className="card-container" >
@@ -25,7 +30,7 @@ const CardHamburguesa = ({ burger }) => {
       </p>
       <div className='buttonsdiv'>
         <button onClick={() => verDetalle()}>Ver Detalle 👀</button>
-        <button onClick={() => verDetalle()}>Añadir al carrito 🍔</button>
+        <button onClick={() => agregarHamburguesa(burger)}>Añadir al carrito 🍔</button>
       </div>
 
     </div>

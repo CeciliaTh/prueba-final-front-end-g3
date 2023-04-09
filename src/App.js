@@ -17,6 +17,8 @@ import MiContexto from "./Contexto/MiContexto.jsx";
 function App() {
  // const endpoint2 = window.location.origin+'/burgers.json'
   const [hamburguesas, setHamburguesas] = useState([]);
+  const [burgerSeleccionada, setBurgerSeleccionada] = useState([]);
+  const [totalSeleccionadas, setTotalSeleccionadas] = useState(0);
   //-----------------------
   //Con este estado pretendo mostrar u ocultar elementos de la barra de navegación
   //Habrá que pasar este estado en el contexto global, pero que cambie de valor despues del login
@@ -33,9 +35,29 @@ function App() {
     getHamburguesas();
   }, [])
 
+  const agregarHamburguesa = (burger) => {
+    const indexNB = burgerSeleccionada.findIndex((bs) => bs.id === burger.id);
+
+
+    if (indexNB > -1) {
+      burgerSeleccionada[indexNB].cantidad += 1;
+      setBurgerSeleccionada([...burgerSeleccionada])
+    }
+    else {
+        const nuevaBurgerSeleccionada = {nombre: burger.nombre, 
+                                        id: burger.id, 
+                                        precio: burger.precio, 
+                                        imagen: burger.img,
+                                        cantidad: 1};
+        setBurgerSeleccionada([...burgerSeleccionada, nuevaBurgerSeleccionada]);
+    }
+    setTotalSeleccionadas(totalSeleccionadas + burger.precio)
+  }
+
+
   return (
     <div >
-      <MiContexto.Provider value={{hamburguesas}}>
+      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, burgerSeleccionada, setBurgerSeleccionada, totalSeleccionadas, setTotalSeleccionadas}}>
       <BrowserRouter>
       <Barra></Barra>
       <Routes>
