@@ -45,18 +45,18 @@ const Carrito = () => {
      
         <div className="row mb-2 pb-2" >
           <div className="col" >
-            <h4><strong>IMAGEN</strong></h4>
+            <h4><strong>Imagen</strong></h4>
           </div>
           <div className="col">
-            <h4><strong>TIPO DE HAMBURGUESA</strong></h4>
+            <h4><strong>Tipo de Hamburguesa</strong></h4>
           </div>
           <div className="col">
-            <h4><strong>PRECIO UNITARIO</strong></h4>
+            <h4><strong>Pecio Unitario</strong></h4>
           </div>
           <div className="col">
-            <h4><strong>SUBTOTAL</strong></h4>
+            <h4><strong>Subtotal</strong></h4>
           </div><div className="col">
-            <h4><strong>CANTIDAD</strong></h4>
+            <h4><strong>Cantidad</strong></h4>
           </div>
 
         </div>
