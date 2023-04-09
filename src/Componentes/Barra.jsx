@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 const Barra = () => {
   const setActiveClass = ({ isActive }) => (isActive ? "active" : "no-active");
   return (
-    <div>
+    <div className='barra1'>
       <Navbar className='barra' expand="lg">
         <Container>
           <NavLink to="/"><Navbar.Brand className='logo2'>BurgerTown</Navbar.Brand></NavLink>
@@ -19,19 +19,19 @@ const Barra = () => {
                 🍔 Inicio BurgerTown
               </NavLink> */}
 
-              <NavLink className={setActiveClass} to="/menu">
+              <NavLink className={setActiveClass} id='letras' to="/menu">
                  Menú Hamburguesas
               </NavLink>
 
-              <NavLink className={setActiveClass} to="/perfil">
+              <NavLink className={setActiveClass} id='letras' to="/perfil">
                 Mi Perfil
               </NavLink>
 
-              <NavLink className={setActiveClass} to="/carrito">
+              <NavLink className={setActiveClass} id='letras' to="/carrito">
                 Carrito
               </NavLink>
 
-              <NavLink className={setActiveClass} to="/login">
+              <NavLink className={setActiveClass} id='letras' to="/login">
                 Iniciar Sesion
               </NavLink>
             </Nav>
