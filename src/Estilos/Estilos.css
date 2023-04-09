@@ -1,9 +1,9 @@
 * {
     font-family: cursive;
     box-sizing: border-box;
-
+    transition: 0.2s;
 }
-
+/* EFECTOS EN LA BARRA */
 .active{
     color:#ffffff;
     margin-left: 1em;
@@ -16,16 +16,20 @@
         0 0 42px #FFC300,
         0 0 82px #FFC300,
         0 0 92px #FFC300;
-
 }
-.active:hover{
-    color:#ffffff;
+#letras:hover{
+    color:#fff;
+    text-shadow: 
+    0 0 7px #fff,
+    0 0 21px #fff,
+    0 0 42px #FFC300,
+    0 0 82px #FFC300,
+    0 0 92px #FFC300;
 }
 .no-active {
-
     text-decoration: none;
     color:white;
-    margin-left: 1em;
+    margin-left: 1.5em;
     font-size: 1.2em;
     font-weight: bold;
     padding:4px;
@@ -33,13 +37,21 @@
 .no-active:hover{
     color:#ffffff;
     text-decoration: none;
-
 }
 .barra{
     background: transparent;
     color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 6.5rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
-
+.barra-scrolled{
+  background-color: #010a01;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
 
 .navtoggle {
     color: #ffffff;
@@ -51,8 +63,6 @@
     text-decoration: none;
     font-weight: bold;
     text-decoration: none;
-
-
 }
 .logo:hover{
     color: #fff;
@@ -60,30 +70,37 @@
     text-shadow: 
         0 0 7px #fff,
         0 0 21px #fff,
-        0 0 42px #FFC300
-        0 0 82px #FFC300
-        0 0 92px #FFC300
-
+        0 0 42px #FFC300,
+        0 0 82px #FFC300,
+        0 0 92px #FFC300;
 }
 .logo2{
     color:#fff;
-    font-size:1.5rem;
+    font-size:2rem;
     padding-left: 1em;
     font-weight: bold;
     
 }
 .logo2:hover{
-    color: #fff;
+    color: #FFf;
     text-decoration: none;
     text-shadow: 
         0 0 7px #fff,
         0 0 21px #fff,
-        0 0 42px #5271ff,
-        0 0 82px #5271ff,
-        0 0 92px #5271ff;
-
+        0 0 42px #FFC300,
+        0 0 82px #FFC300,
+        0 0 92px #FFC300;
 }
-
+.letras:hover{
+  color: #FFf;
+  text-decoration: none;
+  text-shadow: 
+      0 0 7px #fff,
+      0 0 21px #fff,
+      0 0 42px #FFC300,
+      0 0 82px #FFC300,
+      0 0 92px #FFC300;
+}
 .text-home{
     font-family: 'Franklin Gothic Medium', sans-serif;
 }
@@ -96,7 +113,7 @@
     width: 100%;
 }
 
-/* efecto neon */
+/* HOME PAGE*/
 body {
 
     margin: 0;
@@ -161,6 +178,7 @@ body {
     border-radius: 10px;
 } */
 
+/* LOGIN */
 .login-box h2{
     font-size: 40px;
     margin: 0 0 30px;
@@ -212,7 +230,6 @@ body {
     margin: auto;
     border-radius: 15px;
 }
-
 .button-form{
     display: flex;
     justify-content: center;
@@ -246,7 +263,14 @@ body {
   margin: auto;
   border-radius: 15px;
 }
-
+#submit button:hover{
+  background-color: #FFC300;
+  border-color: #FFC300;
+}
+#registrar button:hover{
+  background-color: #FFC300;
+  border-color: #FFC300;
+}
 
 /* CONTENIDO DEL MENU HAMBURGUESA */
 
@@ -262,34 +286,26 @@ body {
 
 /*  CARDS */
 .card-container  {
-
     border-radius: 18px;
     text-align: center;
     border: 0.1px solid yellow;
-
+    min-height: 35rem;
 }
-
 .imagen {
     width: 100%;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
-
 }
-
 .desc {
-    min-height: 3.5rem;
+    height: 4.5rem;
     padding: 2%;
     font-size: small;
 }
-
 .buttonsdiv {
   display: flex;
-  justify-content: space-between;
-  padding: 5%;
-
-
+  justify-content: space-around;
+  padding: 3%;
 }
-
 .buttonsdiv button {
   padding: 1%;
   text-align: center;
@@ -300,7 +316,13 @@ body {
   font-size: 1rem;
   border: none;
 }
-
+.buttonsdiv button:hover {
+  text-align: center;
+  box-shadow:         
+  0 0 7px #fff,
+  0 0 21px #fff,
+  0 0 30px #FFC300;
+}
 .container-general {
   padding: 8%;
   display: flex;
@@ -434,39 +456,12 @@ body {
 
   padding: 8%;
 }
-
-
 .registro-container > * {
 
   border-radius: 15px;
 
-
-  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ESTILOS FOOTER */
-
-
 .footer-distributed{
   background: #666;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
