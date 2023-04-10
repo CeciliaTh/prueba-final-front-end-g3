@@ -114,29 +114,31 @@
 }
 
 /* HOME PAGE*/
-body {
+ body {
 
-    margin: 0;
     padding: 0;
-    box-sizing: none;
     font-family: sans-serif; 
-    font-family: "Yellowtail", sans-serif;
-    background-color: #010a01;
     background-image: url(../Imagenes/interior.jpg);
-    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-}
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+} 
 
 
 .container {
-    min-height: 20vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 
-}
+
+
+} 
 
 .container > * {
   text-decoration: none;
@@ -147,14 +149,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    min-height: 90vh;
     height: 55vh;
+
 
 }
 
 .imgcontainer img {
-    max-width: 75%;
-    max-height: 65%;
+
+    max-height: 30%;
 }
 
 
@@ -167,20 +170,9 @@ body {
   }
 
 
-/* .login-box{
-    top:50%;
-    left: 50%;
-    width: 50%;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background-color: #333;
-    box-shadow: 0 15px 25px #FFC300;
-    border-radius: 10px;
-} */
-
 /* LOGIN */
-.login-box h2{
-    font-size: 40px;
+.login-box h4{
+    font-size: 1.5rem;
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
@@ -199,23 +191,7 @@ body {
     background: transparent;
 }
 
-.login-box .user-box label{
-    position: relative;
-    left: 0;
-    top: -60px;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: 0.5s;
-}
-.login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label{
-    top: -85px;
-    left: 0;
-    color: #ffffff;
-    font-size: 12px;
-}
+
 #submit button{
     padding: 18px 20px;
     color: #000000;
@@ -248,7 +224,9 @@ body {
     text-align: center;
     display: flex;
     align-items: center ;
+    width: 100%;
 }
+
 #resgistrar button{
   padding: 18px 20px;
   color: #000000;
@@ -257,20 +235,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .5s;
   letter-spacing: 4px;
   border: 1px solid #ffffff;
   margin: auto;
   border-radius: 15px;
 }
-#submit button:hover{
-  background-color: #FFC300;
-  border-color: #FFC300;
-}
-#registrar button:hover{
-  background-color: #FFC300;
-  border-color: #FFC300;
-}
+
 
 /* CONTENIDO DEL MENU HAMBURGUESA */
 
@@ -280,6 +250,7 @@ body {
     color: #ffffff;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-bottom: 5rem;
 
     
 }
@@ -289,7 +260,7 @@ body {
     border-radius: 18px;
     text-align: center;
     border: 0.1px solid yellow;
-    min-height: 35rem;
+    min-height: 32rem;
 }
 .imagen {
     width: 100%;
@@ -307,14 +278,15 @@ body {
   padding: 3%;
 }
 .buttonsdiv button {
-  padding: 1%;
+  padding: 2%;
   text-align: center;
   background-color: #FFC300;
   color: #000000;
-  font-weight: 400;
+  font-weight: 100;
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border: none;
+  margin-right: 10px;
 }
 .buttonsdiv button:hover {
   text-align: center;
@@ -324,7 +296,7 @@ body {
   0 0 30px #FFC300;
 }
 .container-general {
-  padding: 8%;
+  padding: 10%;
   display: flex;
   justify-content: center;
 }
@@ -334,7 +306,7 @@ body {
 /* DETALLE HAMBURGUESA */
 
 .detalle-container {
-  padding: 5%;
+  padding: 20%;
   display: flex;
   justify-content: center;
 }
@@ -345,10 +317,10 @@ body {
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  max-width: 70vw;
-  max-height: 70vh;
-  border: 1px solid #FFC300;
+  max-width: 40vw;
+  max-height: 50vh;
   border-radius: 15px;
+  padding: 10%;
 
 
 
@@ -356,13 +328,13 @@ body {
 
 .cardimg-detalle {
   border-radius: 15px;
-  padding: 5%;
+  padding: 3%;
 
 }
 
 .cardimg-detalle img {
-  width: 20vw;
-  min-width: 15rem;
+  width: 10vw;
+  min-width: 9rem;
   border-radius: 15px;
 }
 
@@ -379,31 +351,31 @@ body {
 
 /* // ESTILOS CARRITO */
 
+.cartcss {
+  padding: 18%;
+  min-height: 90vh;
+}
+
+
 .carrito-container {
   display: flex;
   justify-content: center;
-  height: 60vh;
+  height: 55vh;
   padding: 10%;
 }
 
 .carrito-detalle {
   display: flex;
-  width: 80%;
+  width: 40vw;
   justify-content: space-between;
   align-items: center;
   height: 30vh;
-  border: 1px solid #FFC300;
   color: #ffffff;
   border-radius: 15px;
-  padding: 4%;
+  padding: 5%;
 }
 
 
-
-.carrito-img {
-  width: 20%;
-
-}
 
 .carrito-img img {
   width: 100%;
@@ -436,7 +408,7 @@ body {
 /* LOGIN VIEW ESTILOS*/
 
 .login-view {
-  padding: 10%;
+  padding: 15%;
   display: flex;
   justify-content: center;
 }
@@ -445,216 +417,123 @@ body {
   background-color: #333;
   border: 1px solid white;
   border-radius: 10px;
-  max-width: 50vw;
-  padding: 5%;
+  max-width: 40vw;
+  padding: 3%;
 }
+
+
 
 
 /*ESTILOS REGISTRO*/
 
 .registro-container {
 
-  padding: 8%;
-}
-.registro-container > * {
+  padding: 15%;
+  display: flex;
+  justify-content: center;
 
+}
+
+.registrocss {
+  border: 1px solid #ffffff;
   border-radius: 15px;
+  min-width: 80%;
+  text-align: center;
+  font-size: 0.8rem;
 
 }
-/* ESTILOS FOOTER */
-.footer-distributed{
-  background: #666;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-}
 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-  display: inline-block;
-  vertical-align: top;
-}
-
-/* Footer left */
-
-.footer-distributed .footer-left{
+.registrocss input {
+  border-radius: 10px;
+  padding: 5px;
   width: 40%;
+
 }
 
-/* The company logo */
+/*ESTILOS PERFIL*/
 
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px cursive;
-  margin: 0;
+.perfilcss-container {
+  height: 80vh;
 }
 
-.footer-distributed h3 span{
-  color:  #FFC300;
+
+/* ESTILOS FOOTER */
+
+.footercss {
+  background-color: #FFC300;
+  display: flex;
+  height: 20vh;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto; 
+
 }
 
-/* Footer links */
+.footercss > * {
 
-.footer-distributed .footer-links{
-  color:  #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
+  margin: 0.8rem;
+  font-size: 0.7rem;
 }
 
-.footer-distributed .footer-links a{
-  display:inline-block;
-  line-height: 1.8;
-  font-weight:400;
-  text-decoration: none;
-  color:  inherit;
-}
 
-.footer-distributed .footer-company-name{
-  color:  #222;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
 
-/* Footer Center */
 
-.footer-distributed .footer-center{
-  width: 35%;
-}
-
-.footer-distributed .footer-center i{
-  background-color:  #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-  font-size: 17px;
-  line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-  display: inline-block;
-  color: #ffffff;
-  font-weight:400;
-  vertical-align: middle;
-  margin:0;
-}
-
-.footer-distributed .footer-center p span{
-  display:block;
-  font-weight: normal;
-  font-size:14px;
-  line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-  color:  #FFC300;
-  text-decoration: none;;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed .footer-right{
-  width: 20%;
-}
-
-.footer-distributed .footer-company-about{
-  line-height: 20px;
-  color:  #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-  display: block;
-  color:  #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons{
-  margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color:  #33383b;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-
-  margin-right: 3px;
-  margin-bottom: 5px;
-}
 
 /* RESPONSIVE MEDIA QUERIES */
 
-@media (max-width: 980px) {
+@media (max-width: 880px) {
 
   .menu-container {
     grid-template-columns: repeat(2, 1fr);
-
+    
   }
 
-  .footer-distributed{
-    font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right{
-    display: block;
-    width: 100%;
-    max-height: 30vh;
-    margin-bottom: 40px;
+  .footercss {
+    
+    height: 50vh;
+    flex-wrap: wrap;
     text-align: center;
   }
-
-  .footer-distributed .footer-center i{
-    margin-left: 0;
+  .barra {
+    position: relative;
+  }
+  .card-container {
+    margin-top: 10rem;
+  }
+  .detalle-container {
+    margin-top: 5rem;
+  }
+  .card-detalle {
+    min-width: 100vw;
+  }
+  .cartcss {
+    margin-top: 5rem;
   }
 
+  .cartcss div {
+    min-width: 100%;
+  }
+
+  .login-view {
+    margin-top: 8rem;
+
+  }
+  .registro-container {
+    margin-top: 5rem;
+  }
+  .registro-container > * {
+    min-width: 100vw;
+  }
+  .registrocss > * {
+    min-width: 100vw;
+  }
+
+  
   .carrito-detalle {
 
     flex-direction: column;
     border: none;
-
-
-
 
   }
 
@@ -662,14 +541,14 @@ body {
 
 @media (max-width: 550px) {
   .menu-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
+
   body {
     background-repeat: repeat;
-    height: 100vh;
-
 
   }
+
   .login-box {
 
     min-width: 100vw;
@@ -680,63 +559,7 @@ body {
 }
 
 
-
-
 /* IMAGEN ICONOS WS, INSTAGRAM */
 .imgws {
     width: 4vh;
 }
-
-
-
-/* }
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-flex;
-    filter: brightness(300%);
-    overflow: hidden;
-    background-image: ;
-}
-.txt{
-    color: #fff;
-    background: black;
-    font-size: 150px;
-    font-weight: bold;
-    margin: auto;
-}
-.txt:before{
-    content: 'Burguer Town';
-    position: absolute;
-    mix-blend-mode: difference;
-    filter: blur(2px);
-}
-.txt_gradient{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: multiply;
-    background: linear-gradient(45deg, 
-                rgb(6, 112, 250) 5%,
-                rgb(255, 0, 64) 97%);
-}
-.txt_dodge{
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-    mix-blend-mode: color-dodge;
-    background: radial-gradient(circle,white,black 35%) 
-                center / 25% 25%;
-    animation: neon 3s linear infinite;
-}
-@keyframes neon{
-    to{
-        transform: translate(50%, 50%);
-    }
-} */

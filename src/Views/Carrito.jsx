@@ -39,24 +39,24 @@ const Carrito = () => {
   });
 
   return (
-<div className='p-5'>
-      <h1 className="text-center text-white p-4"> DETALLE DEL PEDIDO </h1>
+<div className='cartcss'>
+      <h2 className="text-center text-white"> DETALLE DEL PEDIDO </h2>
       <div className=' text-white m-auto p-3 border border-warning justify-content-between'>
      
-        <div className="row mb-2 pb-2" >
+        <div className="row" >
           <div className="col" >
-            <h4><strong>Imagen</strong></h4>
+            <h5><strong>Imagen</strong></h5>
           </div>
           <div className="col">
-            <h4><strong>Tipo de Hamburguesa</strong></h4>
+            <h5><strong>Tipo de Hamburguesa</strong></h5>
           </div>
           <div className="col">
-            <h4><strong>Pecio Unitario</strong></h4>
+            <h5><strong>Pecio Unitario</strong></h5>
           </div>
           <div className="col">
-            <h4><strong>Subtotal</strong></h4>
+            <h5><strong>Subtotal</strong></h5>
           </div><div className="col">
-            <h4><strong>Cantidad</strong></h4>
+            <h5><strong>Cantidad</strong></h5>
           </div>
 
         </div>
