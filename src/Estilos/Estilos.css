@@ -41,12 +41,9 @@
 .barra{
     background: transparent;
     color: #ffffff;
-    position: fixed;
     width: 100%;
-    top: 0;
     height: 6.5rem;
     letter-spacing: 0.5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 .barra-scrolled{
   background-color: #010a01;
