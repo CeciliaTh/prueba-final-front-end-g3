@@ -6,7 +6,7 @@ const Login = () => {
 
     <div className='login-view'>
       <div className='login-box'>
-        <h2>Iniciar sesión</h2>
+        <h4>Iniciar sesión</h4>
         <form>
           <div className='user-box'>
             <input type='text' placeholder='Nombre'></input>

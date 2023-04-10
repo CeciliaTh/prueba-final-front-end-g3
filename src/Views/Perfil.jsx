@@ -2,7 +2,11 @@ import React from 'react'
 
 const Perfil = () => {
   return (
-    <div>Perfil de usuario</div>
+    <div className='perfilcss-container'>
+
+      <div></div>
+      
+    </div>
   )
 }
 
