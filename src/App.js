@@ -14,6 +14,9 @@ import Carrito from "./Views/Carrito";
 import NotFound from "./Views/NotFound";
 import MiContexto from "./Contexto/MiContexto.jsx";
 
+//import Alert from 'react-bootstrap/Alert';
+
+
 function App() {
  // const endpoint2 = window.location.origin+'/burgers.json'
   const [hamburguesas, setHamburguesas] = useState([]);
@@ -42,6 +45,8 @@ function App() {
     if (indexNB > -1) {
       burgerSeleccionada[indexNB].cantidad += 1;
       setBurgerSeleccionada([...burgerSeleccionada])
+      alert("Hamburguesa agregada")
+    
     }
     else {
         const nuevaBurgerSeleccionada = {nombre: burger.nombre, 
@@ -50,8 +55,11 @@ function App() {
                                         imagen: burger.img,
                                         cantidad: 1};
         setBurgerSeleccionada([...burgerSeleccionada, nuevaBurgerSeleccionada]);
+        alert("Hamburguesa agregada")
+      
     }
     setTotalSeleccionadas(totalSeleccionadas + burger.precio)
+    
   }
 
 
