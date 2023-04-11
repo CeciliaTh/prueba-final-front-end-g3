@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Estilos/Estilos.css";
+import MiContexto from "./Contexto/MiContexto.jsx";
 import Home from "./Views/Home.jsx";
 import Barra from "./Componentes/Barra.jsx";
 import Perfil from "./Views/Perfil.jsx";
@@ -11,8 +12,9 @@ import Footer from "./Componentes/Footer.jsx"
 import MenuHamburguesas from "./Componentes/MenuHamburguesas.jsx";
 import Detalle from "./Views/Detalle.jsx";
 import Carrito from "./Views/Carrito";
+import Favoritos from "./Views/Favoritos";
 import NotFound from "./Views/NotFound";
-import MiContexto from "./Contexto/MiContexto.jsx";
+import Barraprivada from "./Componentes/Barraprivada";
 
 //import Alert from 'react-bootstrap/Alert';
 
@@ -22,6 +24,8 @@ function App() {
   const [hamburguesas, setHamburguesas] = useState([]);
   const [burgerSeleccionada, setBurgerSeleccionada] = useState([]);
   const [totalSeleccionadas, setTotalSeleccionadas] = useState(0);
+  const [conectado, setConectado] = useState(false);
+  const [listaUsuarios, setListausuarios] = useState([]);
   //-----------------------
   //Con este estado pretendo mostrar u ocultar elementos de la barra de navegación
   //Habrá que pasar este estado en el contexto global, pero que cambie de valor despues del login
@@ -34,9 +38,13 @@ function App() {
     setHamburguesas(data);
   }
 
-  useEffect(() => {
-    getHamburguesas();
-  }, [])
+  async function getListaUsuarios() {
+    const res = await fetch("/usuarios.json");
+    const data = await res.json();
+    setListausuarios(data);
+  }
+
+
 
   const agregarHamburguesa = (burger) => {
     const indexNB = burgerSeleccionada.findIndex((bs) => bs.id === burger.id);
@@ -62,20 +70,36 @@ function App() {
     
   }
 
+  useEffect(() => {
+    getHamburguesas();
+    getListaUsuarios();
+  }, [])
+
 
   return (
     <div >
-      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, burgerSeleccionada, setBurgerSeleccionada, totalSeleccionadas, setTotalSeleccionadas}}>
+      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, burgerSeleccionada, setBurgerSeleccionada,
+                                   totalSeleccionadas, setTotalSeleccionadas, conectado, setConectado, listaUsuarios}}>
+
+
       <BrowserRouter>
-      <Barra></Barra>
+      {conectado === true ?  
+      (<Barraprivada></Barraprivada>)
+      : (<Barra></Barra>)
+      }
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/perfil" element={<Perfil></Perfil>}></Route>
         <Route path="/menu" element={<MenuHamburguesas></MenuHamburguesas>}></Route>
         <Route path="/detalle/:id" element={<Detalle></Detalle>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/registro" element={<Registro></Registro>}></Route>
         <Route path="/carrito" element={<Carrito></Carrito>}></Route>
+        {conectado && 
+          <> 
+            <Route path="/favoritos" element={<Favoritos></Favoritos>}></Route>
+            <Route path="/perfil" element={<Perfil></Perfil>}></Route>
+          </>
+        }
         <Route path="*" element= {<NotFound></NotFound>}> </Route>
       </Routes>
       </BrowserRouter>

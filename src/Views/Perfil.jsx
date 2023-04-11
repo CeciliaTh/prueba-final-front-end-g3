@@ -4,8 +4,10 @@ const Perfil = () => {
   return (
     <div className='perfilcss-container'>
 
-      <div></div>
-      
+      <div>
+        <h4>Vista Perfil</h4>
+      </div>
+
     </div>
   )
 }

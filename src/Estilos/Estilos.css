@@ -451,9 +451,59 @@
 
 .perfilcss-container {
   height: 80vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
+
+
+
+/*ESTILOS FAVORITOS VIEW*/
+
+
+
+.favoritos-container {
+
+  display: flex;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.favoritosview {
+
+  color: white;
+  min-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*NOT FOUND VIEW*/
+
+
+.notfound {
+
+  display: flex;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.notfound h4 {
+
+  color: white;
+  text-align: center;
+}
 /* ESTILOS FOOTER */
 
 .footercss {
@@ -532,6 +582,9 @@
     flex-direction: column;
     border: none;
 
+  }
+  .favoritos-container {
+    margin-top: 10rem;
   }
 
 }

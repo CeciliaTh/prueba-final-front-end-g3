@@ -1,0 +1,32 @@
+[
+    {
+      "usuario": "carlosdg",
+      "nombre": "Carlos Garcia",
+      "email": "carlosdavid@gmail.com",
+      "telefono": "98765432",
+      "clave":"1234"
+    },
+    {
+      
+        "usuario": "ceciliath",
+        "nombre": "Cecilia Thielemann",
+        "email": "cecilia@gmail.com",
+        "telefono": "97765432",
+        "clave":"5432"
+      },
+      {  
+        "usuario": "victoroll",
+        "nombre": "Victor Ollarves",
+        "email": "victor@gmail.com",
+        "telefono": "98865432",
+        "clave":"4321"
+      },
+
+      { "usuario": "leocastillo",
+        "nombre": "Leonardo Castillo",
+        "email": "leonardojose@gmail.com",
+        "telefono": "98765432",
+        "clave":"1245"
+      }
+
+  ]
