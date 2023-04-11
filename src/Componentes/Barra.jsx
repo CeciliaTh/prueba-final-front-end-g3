@@ -2,7 +2,6 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
 import { NavLink } from 'react-router-dom';
 
 const Barra = () => {
@@ -15,17 +14,11 @@ const Barra = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" className='navtoggle' />
           <Navbar.Collapse id="basic-navbar-nav" className='navtoggle'>
             <Nav className="ms-auto">
-              {/* <NavLink className={setActiveClass}  to="/">
-                🍔 Inicio BurgerTown
-              </NavLink> */}
 
               <NavLink className={setActiveClass} id='letras' to="/menu">
                  Menú Hamburguesas
               </NavLink>
 
-              <NavLink className={setActiveClass} id='letras' to="/perfil">
-                Mi Perfil
-              </NavLink>
 
               <NavLink className={setActiveClass} id='letras' to="/carrito">
                 Carrito

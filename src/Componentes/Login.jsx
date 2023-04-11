@@ -1,7 +1,32 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import MiContexto from '../Contexto/MiContexto';
 
 const Login = () => {
+
+  const {listaUsuarios, setConectado} = useContext(MiContexto);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+
+
+  const validarUsuario = () => {
+    
+
+    const usuarioValido = listaUsuarios.find((usuario)=>  usuario.email === email && usuario.clave === password)
+    if (usuarioValido) {
+  
+      setConectado(true)
+
+    }
+    else {
+      alert("usuario o clave incorrecto")
+    }
+ 
+  }
+
+
   return (
 
     <div className='login-view'>
@@ -9,14 +34,14 @@ const Login = () => {
         <h4>Iniciar sesión</h4>
         <form>
           <div className='user-box'>
-            <input type='text' placeholder='Nombre'></input>
+            <input type='email' placeholder='Email' onChange={(e)=> setEmail(e.target.value)}></input>
           </div>
           <div className='user-box'>
-            <input type='password' placeholder='Contraseña'></input>
+            <input type='password' placeholder='Contraseña' onChange={(e)=> setPassword(e.target.value)}></input>
           </div>
 
           <div className='button-form'>
-            <NavLink to="/perfil" id='submit'><button variant="primary">Iniciar Sesión</button></NavLink>
+            <NavLink to="/login" id='submit'><button variant="primary" onClick={()=> validarUsuario()}>Iniciar Sesión</button></NavLink>
             <div id='registrar'>
               ¿No te has registrado?
               <NavLink to="/registro" id='resgistrar'><button>Registrate</button></NavLink>
