@@ -1,7 +1,7 @@
 * {
     font-family: cursive;
     box-sizing: border-box;
-    transition: 0.2s;
+
 }
 /* EFECTOS EN LA BARRA */
 .active{
@@ -457,8 +457,28 @@
   align-items: center;
 }
 
+/* ESTILOS LIKE HAMBURGUESAS*/
+.heart{
+  color: #fff;
+  fill: none;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.5);
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -50px;
+}
+.liked{
+  color: red;
+  fill: red;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.5);
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -50px;
 
-
+}
 
 
 /*ESTILOS FAVORITOS VIEW*/
