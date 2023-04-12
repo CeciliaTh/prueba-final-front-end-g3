@@ -16,35 +16,34 @@ import Favoritos from "./Views/Favoritos";
 import NotFound from "./Views/NotFound";
 import Barraprivada from "./Componentes/Barraprivada";
 
-//import Alert from 'react-bootstrap/Alert';
-
 
 function App() {
  // const endpoint2 = window.location.origin+'/burgers.json'
   const [hamburguesas, setHamburguesas] = useState([]);
+  const [hamburguesasSort, setHamburguesasSort] = useState([]);
   const [burgerSeleccionada, setBurgerSeleccionada] = useState([]);
   const [totalSeleccionadas, setTotalSeleccionadas] = useState(0);
   const [conectado, setConectado] = useState(false);
   const [listaUsuarios, setListausuarios] = useState([]);
-  //-----------------------
-  //Con este estado pretendo mostrar u ocultar elementos de la barra de navegación
-  //Habrá que pasar este estado en el contexto global, pero que cambie de valor despues del login
-  //const [usuarioConectado, setUsuarioConectado] = useState(false);
-  //-----------------------
+  const [orden, setOrden] = useState('0');
+  //const [usuario, setUsuario] = useState({});
+  //const [comentarios, setcomentarios] = useState([]);
+  //Compartir este estado en el contexto
+
 
   async function getHamburguesas() {
     const res = await fetch("/burgers.json");
     const data = await res.json();
     setHamburguesas(data);
+    setHamburguesasSort(data);
   }
+
 
   async function getListaUsuarios() {
     const res = await fetch("/usuarios.json");
     const data = await res.json();
     setListausuarios(data);
   }
-
-
 
   const agregarHamburguesa = (burger) => {
     const indexNB = burgerSeleccionada.findIndex((bs) => bs.id === burger.id);
@@ -79,7 +78,7 @@ function App() {
   return (
     <div >
       <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, burgerSeleccionada, setBurgerSeleccionada,
-                                   totalSeleccionadas, setTotalSeleccionadas, conectado, setConectado, listaUsuarios}}>
+                                   totalSeleccionadas, setTotalSeleccionadas, conectado, setConectado, listaUsuarios, orden, setOrden, hamburguesasSort, setHamburguesasSort}}>
 
 
       <BrowserRouter>
