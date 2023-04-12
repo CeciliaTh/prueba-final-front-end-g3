@@ -4,29 +4,40 @@
       "nombre": "Carlos Garcia",
       "email": "carlosdavid@gmail.com",
       "telefono": "98765432",
-      "clave":"1234"
+      "clave":"1234",
+      "id": 1,
+      "favoritos":[],
+      "comentarios":[]
     },
     {
-      
         "usuario": "ceciliath",
         "nombre": "Cecilia Thielemann",
         "email": "cecilia@gmail.com",
         "telefono": "97765432",
-        "clave":"5432"
+        "clave":"5432",
+        "id": 2,
+        "favoritos":[],
+        "comentarios":[]
       },
       {  
         "usuario": "victoroll",
         "nombre": "Victor Ollarves",
         "email": "victor@gmail.com",
         "telefono": "98865432",
-        "clave":"4321"
+        "clave":"4321",
+        "id": 3,
+        "favoritos":[],
+        "comentarios":[]
       },
 
       { "usuario": "leocastillo",
         "nombre": "Leonardo Castillo",
         "email": "leonardojose@gmail.com",
         "telefono": "98765432",
-        "clave":"1245"
+        "clave":"1245",
+        "id": 4,
+        "favoritos":[],
+        "comentarios":[]
       }
 
   ]

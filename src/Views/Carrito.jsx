@@ -64,6 +64,9 @@ const Carrito = () => {
       </div>
 
       {
+        burgerSeleccionada.length === 0 ? <div className="p-4"><div className="alert alert-info text-center" role="alert">
+        ¡No hay hamburguesas en tu carrito!
+      </div></div> :
         burgerSeleccionada.map((bs, i) => {
           return (
 <div key={i} className='text-white m-auto p-3 border border-warning'>
