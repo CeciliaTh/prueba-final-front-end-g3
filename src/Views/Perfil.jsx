@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+
+
 
 const Perfil = () => {
+
   return (
     <div className='perfilcss-container'>
 

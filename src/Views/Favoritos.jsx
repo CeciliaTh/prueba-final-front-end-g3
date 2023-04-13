@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import GaleriaHamburguesas from '../Componentes/GaleriaHamburguesas.jsx';
 
 const Favoritos = () => {
   return (
     <div className='favoritos-container'>
       <div className='favoritosview'>
-        <h4>Vista Favoritos</h4>
-
+        
+        <GaleriaHamburguesas fav={true} ></GaleriaHamburguesas>
       </div>
     </div>
   )

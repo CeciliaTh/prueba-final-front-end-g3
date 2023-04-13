@@ -4,6 +4,7 @@
     "id": 1,
     "desc": "135 Gr. Carne, Tomate, Lechuga, Queso Cheddar, Pepinillos y Sauce",
     "precio": 4990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_classic_simple_menu_nlf_1000x1000_27_1654262356qBG9rw.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX2NsYXNzaWNfc2ltcGxlX21lbnVfbmxmXzEwMDB4MTAwMF8yN18xNjU0MjYyMzU2cUJHOXJ3LjA1LmpwZyJ9.ttNT3BVRX6ookoT1M7CWWXjApLOBpLq4Ld1XFx6Mbfo"
   },
   {
@@ -11,6 +12,7 @@
     "id": 2,
     "desc": "135 Gr. Carne, Queso Cheddar, Bacon,  Cebolla Grillada, Cebolla Crispy y BBQ Sauce",
     "precio": 7990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_bbq_simple_menu_nlf_1000x1000_27_1654262382q5n3RM.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX2JicV9zaW1wbGVfbWVudV9ubGZfMTAwMHgxMDAwXzI3XzE2NTQyNjIzODJxNW4zUk0uMDUuanBnIn0.xmoc-eTMWhJb0NnXNcEwDMLloJy6htvAePMDR5PlmSg"
   },
   {
@@ -18,6 +20,7 @@
     "id": 3,
     "desc": "Berenjena Apanada, Fondue de Mozzarella, Pesto de Tomate Deshidratado Rúcula y Mayonesa",
     "precio": 6990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_veggie_simple_menu_nlf_1000x1000_27_16542628213ZdqFC.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX3ZlZ2dpZV9zaW1wbGVfbWVudV9ubGZfMTAwMHgxMDAwXzI3XzE2NTQyNjI4MjEzWmRxRkMuMDUuanBnIn0.J_i3spjcmPmdaYxay0SpYJX90bKq0CzjMRfcJr0Prmo"
   },
   {
@@ -25,6 +28,7 @@
     "id": 4,
     "desc": "135 Gr Carne, Queso Cheddar y Sauce",
     "precio": 4990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_cheese_simple_menu_nlf_1920x1080_27_1654262299Qilcxf.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX2NoZWVzZV9zaW1wbGVfbWVudV9ubGZfMTkyMHgxMDgwXzI3XzE2NTQyNjIyOTlRaWxjeGYuMDUuanBnIn0.JdAucOdaj04ljnB_qv32qF0IUfD1v8UVFi6tbWKTDjw"
   },
   {
@@ -32,6 +36,7 @@
     "id": 5,
     "desc": "Doble Carne de 135 Gr. Doble Queso Cheddar, Tomate, Lechuga y Pepinillos",
     "precio": 7990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_classic_doble_menu_nlf_1000x1000_25_1666726830PxrEWF.10.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX2NsYXNzaWNfZG9ibGVfbWVudV9ubGZfMTAwMHgxMDAwXzI1XzE2NjY3MjY4MzBQeHJFV0YuMTAuanBnIn0.p7KDg0NfqI2pxJUBeyrTdyoubnJJTHNSvzhNBYr6rOg"
   },
   {
@@ -39,6 +44,7 @@
     "id": 6,
     "desc": "Doble de 135 Gr. Carne, Queso Cheddar, Bacon,  Cebolla Grillada, Cebolla Crispy y BBQ Sauce",
     "precio": 9990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_bbq_doble_menu_nlf_1920x1080_27_1665588338ZvSCea.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX2JicV9kb2JsZV9tZW51X25sZl8xOTIweDEwODBfMjdfMTY2NTU4ODMzOFp2U0NlYS4wNS5qcGcifQ.5HfgZA4pkEA6BxegxeXAqlipQCdu7sNH3Wrfj5tdtXs"
   },
   {
@@ -46,6 +52,7 @@
     "id": 7,
     "desc": "Doble Berenjena Frita, Doble Fondue de Mozzarella, Pesto de Tomate Deshidratado Rucula y Mayonesa",
     "precio": 9990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_veggie_doble_menu_nlf_1000x1000_27_1654263089JK3C8D.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX3ZlZ2dpZV9kb2JsZV9tZW51X25sZl8xMDAweDEwMDBfMjdfMTY1NDI2MzA4OUpLM0M4RC4wNS5qcGcifQ.puS82gI0Fm94raxKyBgGa2uH2GWZELHc_jXHJIn5UwU"
   },
   {
@@ -53,6 +60,7 @@
     "id": 8,
     "desc": "Doble Carne de 135 Gr. Doble Queso Cheddar y Sauce",
     "precio": 7990,
+    "liked": false,
     "img": "https://cdn.mer-cat.com/justburger/1200x1200/img/products/b_cheese_doble_menu_nlf_1000x1000_27_1654262877bwnw78.05.jpg?pass=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiMTIwMHgxMjAwL2ltZy9wcm9kdWN0cy9iX2NoZWVzZV9kb2JsZV9tZW51X25sZl8xMDAweDEwMDBfMjdfMTY1NDI2Mjg3N2J3bnc3OC4wNS5qcGcifQ.n8_3KO5DM790UBFDXyqJUnQZQRaXM5XmUVxRqVbPJ8I"
   }
 ]
