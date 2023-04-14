@@ -38,6 +38,9 @@ const Barraprivada = () => {
                 <NavLink className={setActiveClass} id='letras' to="/favoritos">
                   Favoritos
                 </NavLink>
+                <NavLink className={setActiveClass} id='letras' to="/comentarios">
+                  Comentarios
+                </NavLink>
 
                 <NavLink className={setActiveClass} id='letras' to="/" onClick={()=>cerrarsesion()}>
                   Cerrar Sesión 

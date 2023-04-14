@@ -457,6 +457,16 @@
   align-items: center;
 }
 
+  /* ESTILOS COMENTARIOS*/
+  .comentarios-css{
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
 /* ESTILOS LIKE HAMBURGUESAS*/
 .heart{
   color: #fff;
@@ -607,6 +617,7 @@
     margin-top: 10rem;
   }
 
+
 }
 
 @media (max-width: 550px) {
@@ -633,3 +644,4 @@
 .imgws {
     width: 4vh;
 }
+

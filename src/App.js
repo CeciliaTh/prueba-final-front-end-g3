@@ -15,6 +15,7 @@ import Carrito from "./Views/Carrito";
 import Favoritos from "./Views/Favoritos";
 import NotFound from "./Views/NotFound";
 import Barraprivada from "./Componentes/Barraprivada";
+import Comentarios from "./Views/Comentarios.jsx";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
   const [conectado, setConectado] = useState(false);
   const [listaUsuarios, setListausuarios] = useState([]);
   const [orden, setOrden] = useState('0');
-  //const [usuario, setUsuario] = useState({});
+  const [usuarioActual, setUsuarioActual] = useState({});
   //const [comentarios, setcomentarios] = useState([]);
   //Compartir este estado en el contexto
 
@@ -77,8 +78,14 @@ function App() {
 
   return (
     <div >
-      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, burgerSeleccionada, setBurgerSeleccionada,
-                                   totalSeleccionadas, setTotalSeleccionadas, conectado, setConectado, listaUsuarios, orden, setOrden, hamburguesasSort, setHamburguesasSort}}>
+      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, 
+                                  burgerSeleccionada, setBurgerSeleccionada,
+                                   totalSeleccionadas, setTotalSeleccionadas, 
+                                   conectado, setConectado, 
+                                   listaUsuarios, 
+                                   orden, setOrden, 
+                                   hamburguesasSort, setHamburguesasSort,
+                                   usuarioActual, setUsuarioActual}}>
 
 
       <BrowserRouter>
@@ -96,7 +103,8 @@ function App() {
         {conectado && 
           <> 
             <Route path="/favoritos" element={<Favoritos></Favoritos>}></Route>
-            <Route path="/perfil" element={<Perfil></Perfil>}></Route>
+            <Route path="/perfil/:id" element={<Perfil></Perfil>}></Route>
+            <Route path="/comentarios" element={<Comentarios></Comentarios>}></Route>
           </>
         }
         <Route path="*" element= {<NotFound></NotFound>}> </Route>
