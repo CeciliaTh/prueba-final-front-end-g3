@@ -2,7 +2,10 @@ import React from 'react'
 
 const Comentarios = () => {
   return (
-    <div>Comentarios</div>
+    <div className = "comentarios-css">
+      <div>Comentarios</div>
+    </div>
+    
   )
 }
 
