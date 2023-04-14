@@ -9,9 +9,6 @@ const Login = (usuario) => {
   const { listaUsuarios, setConectado } = useContext(MiContexto);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-
-  
   const navigate = useNavigate();
 
   const verDetalle = () => {
@@ -27,6 +24,9 @@ const Login = (usuario) => {
     if (usuarioValido) {
   
       setConectado(true)
+      navigate(`/perfil`)
+
+
       // const usuarios = listaUsuarios.map((usuario) => 
       //                               <div key={usuario.id}> 
       //                                 id : {usuario.id}, 
@@ -56,11 +56,10 @@ const Login = (usuario) => {
           </div>
 
           <div className='button-form'>
-            {/* <NavLink to="/login" id='submit'><button variant="primary" onClick={()=> validarUsuario()}>Iniciar Sesión</button></NavLink> */}
-            <button variant="primary" id='submit' onClick={()=> validarUsuario()}>Iniciar Sesión</button>
+            <button className='resgistrar' onClick={()=> validarUsuario()}>Iniciar Sesión</button>
             <div id='registrar'>
               ¿No te has registrado?
-              <NavLink to="/registro" id='resgistrar'><button>Registrate</button></NavLink>
+              <NavLink to="/registro"><button>Registrate</button></NavLink>
             </div>
           </div>
 
