@@ -5,17 +5,18 @@ import { FiHeart } from "react-icons/fi";
 
 
 const CardHamburguesa = ({ burger, fav }) => {
-  const { agregarHamburguesa, hamburguesas } = useContext(MiContexto);
+  const { agregarHamburguesa, hamburguesas, setHamburguesas, conectado } = useContext(MiContexto);
   const navigate = useNavigate();
 
-            // favoritos
-            const misFavoritos = (id) => {
-              console.log(id)
-              const click = hamburguesas.findIndex((b) => b.id === id);
-              hamburguesas[click].liked = !hamburguesas[click].liked;
-              
-            }
-          // favoritos
+
+    
+          const setFav = (id) => {
+
+            const burgerIndex =  hamburguesas.findIndex((burg)=> burg.id === id)
+            hamburguesas[burgerIndex].liked = !hamburguesas[burgerIndex].liked;
+            setHamburguesas([...hamburguesas]);
+            
+           };
 
   const verDetalle = () => {
     navigate(`/detalle/${burger.id}`)
@@ -26,7 +27,7 @@ const CardHamburguesa = ({ burger, fav }) => {
       <div className="cardimg">
         <img src={burger.img} alt="imagen-hamburguesa" className="imagen"></img>
         
-        {!fav && <FiHeart className={burger.liked?'liked':'heart'} onClick={() => misFavoritos(burger.id)}/>}
+        {conectado && !fav && <FiHeart className={burger.liked?'liked':'heart'} onClick={() => setFav(burger.id)}/>}
       
       </div>
       <h4>

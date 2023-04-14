@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import MiContexto from '../Contexto/MiContexto';
 
@@ -8,6 +8,7 @@ const Login = () => {
   const {listaUsuarios, setConectado} = useContext(MiContexto);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate= useNavigate();
 
 
 
@@ -18,6 +19,7 @@ const Login = () => {
     if (usuarioValido) {
   
       setConectado(true)
+      navigate(`/perfil`)
 
     }
     else {
@@ -41,10 +43,10 @@ const Login = () => {
           </div>
 
           <div className='button-form'>
-            <NavLink to="/login" id='submit'><button variant="primary" onClick={()=> validarUsuario()}>Iniciar Sesión</button></NavLink>
+            <button className='resgistrar' onClick={()=> validarUsuario()}>Iniciar Sesión</button>
             <div id='registrar'>
               ¿No te has registrado?
-              <NavLink to="/registro" id='resgistrar'><button>Registrate</button></NavLink>
+              <NavLink to="/registro" className='resgistrar'><button>Registrate</button></NavLink>
             </div>
           </div>
 
