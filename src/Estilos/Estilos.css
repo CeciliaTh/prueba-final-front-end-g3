@@ -212,10 +212,12 @@
 
 .button-form button {
   max-width: 10rem;
+  border-radius: 15px;
+
+  
 }
 
-#registrar{
-    font-size: 15px;
+#registrar {
     text-decoration: none;
     color: #ffffff;
     text-align: center;
@@ -224,19 +226,7 @@
     width: 100%;
 }
 
-#resgistrar button{
-  padding: 18px 20px;
-  color: #000000;
-  background-color: #ffffff;
-  font-size: 0.7rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  letter-spacing: 4px;
-  border: 1px solid #ffffff;
-  margin: auto;
-  border-radius: 15px;
-}
+
 
 
 /* CONTENIDO DEL MENU HAMBURGUESA */
@@ -478,6 +468,7 @@
   margin-top: 15px;
   margin-left: -50px;
 }
+
 .liked{
   color: red;
   fill: red;
