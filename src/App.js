@@ -78,5 +78,42 @@ function App() {
 
   return (
     <div >
+      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, 
+                                  burgerSeleccionada, setBurgerSeleccionada,
+                                   totalSeleccionadas, setTotalSeleccionadas, 
+                                   conectado, setConectado, 
+                                   listaUsuarios, 
+                                   orden, setOrden, 
+                                   hamburguesasSort, setHamburguesasSort,
+                                   usuarioActual, setUsuarioActual}}>
 
 
+      <BrowserRouter>
+      {conectado === true ?  
+      (<Barraprivada></Barraprivada>)
+      : (<Barra></Barra>)
+      }
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/menu" element={<MenuHamburguesas></MenuHamburguesas>}></Route>
+        <Route path="/detalle/:id" element={<Detalle></Detalle>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/registro" element={<Registro></Registro>}></Route>
+        <Route path="/carrito" element={<Carrito></Carrito>}></Route>
+        {conectado && 
+          <> 
+            <Route path="/favoritos" element={<Favoritos></Favoritos>}></Route>
+            <Route path="/perfil/:id" element={<Perfil></Perfil>}></Route>
+            <Route path="/comentarios" element={<Comentarios></Comentarios>}></Route>
+          </>
+        }
+        <Route path="*" element= {<NotFound></NotFound>}> </Route>
+      </Routes>
+      </BrowserRouter>
+      <Footer></Footer>
+      </MiContexto.Provider>
+    </div>
+  );
+}
+
+export default App;
