@@ -15,6 +15,7 @@ import Carrito from "./Views/Carrito";
 import Favoritos from "./Views/Favoritos";
 import NotFound from "./Views/NotFound";
 import Barraprivada from "./Componentes/Barraprivada";
+import Comentarios from "./Views/Comentarios.jsx";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
   const [conectado, setConectado] = useState(false);
   const [listaUsuarios, setListausuarios] = useState([]);
   const [orden, setOrden] = useState('0');
-  //const [usuario, setUsuario] = useState({});
+  const [usuarioActual, setUsuarioActual] = useState({});
   //const [comentarios, setcomentarios] = useState([]);
   //Compartir este estado en el contexto
 
@@ -77,36 +78,5 @@ function App() {
 
   return (
     <div >
-      <MiContexto.Provider value={{hamburguesas, setHamburguesas, agregarHamburguesa, burgerSeleccionada, setBurgerSeleccionada,
-                                   totalSeleccionadas, setTotalSeleccionadas, conectado, setConectado, listaUsuarios, orden, setOrden, hamburguesasSort, setHamburguesasSort}}>
 
-
-      <BrowserRouter>
-      {conectado === true ?  
-      (<Barraprivada></Barraprivada>)
-      : (<Barra></Barra>)
-      }
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/menu" element={<MenuHamburguesas></MenuHamburguesas>}></Route>
-        <Route path="/detalle/:id" element={<Detalle></Detalle>}></Route>
-        <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/registro" element={<Registro></Registro>}></Route>
-        <Route path="/carrito" element={<Carrito></Carrito>}></Route>
-        {conectado && 
-          <> 
-            <Route path="/favoritos" element={<Favoritos></Favoritos>}></Route>
-            <Route path="/perfil" element={<Perfil></Perfil>}></Route>
-          </>
-        }
-        <Route path="*" element= {<NotFound></NotFound>}> </Route>
-      </Routes>
-      </BrowserRouter>
-      <Footer></Footer>
-      </MiContexto.Provider>
-    </div>
-  );
-}
-
-export default App;
 
