@@ -78,7 +78,7 @@ function App() {
 
   return (
     <div >
-      <MiContexto.Provider value={{hamburguesas, agregarHamburguesa, 
+      <MiContexto.Provider value={{hamburguesas, setHamburguesas, agregarHamburguesa, 
                                   burgerSeleccionada, setBurgerSeleccionada,
                                    totalSeleccionadas, setTotalSeleccionadas, 
                                    conectado, setConectado, 
