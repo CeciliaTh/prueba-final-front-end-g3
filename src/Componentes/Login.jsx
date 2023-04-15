@@ -4,19 +4,14 @@ import { useState } from 'react';
 import MiContexto from '../Contexto/MiContexto';
 import { useNavigate } from 'react-router-dom';
 
-const Login = (usuario) => {
+const Login = () => {
 
-  const { listaUsuarios, setConectado } = useContext(MiContexto);
+  const navigate = useNavigate();
+  const { listaUsuarios, setConectado, setUsuarioActual } = useContext(MiContexto);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-
-  const verDetalle = () => {
-    navigate(`/perfil/${usuario.id}`)
-  }
-
-
-  const validarUsuario = () => {
+  
+   const validarUsuario = () => {
        
     
 
@@ -24,23 +19,15 @@ const Login = (usuario) => {
     if (usuarioValido) {
   
       setConectado(true)
+      setUsuarioActual(usuarioValido)
       navigate(`/perfil`)
-
-
-      // const usuarios = listaUsuarios.map((usuario) => 
-      //                               <div key={usuario.id}> 
-      //                                 id : {usuario.id}, 
-      //                                 nombre: {usuario.nombre},
-      // </div>)
-      verDetalle() 
-
+   
     }
     else {
       alert("usuario o clave incorrecto")
     }
  
   }
-
 
   return (
 

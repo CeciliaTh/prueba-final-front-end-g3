@@ -28,7 +28,7 @@ function App() {
   const [listaUsuarios, setListausuarios] = useState([]);
   const [orden, setOrden] = useState('0');
   const [usuarioActual, setUsuarioActual] = useState({});
-  //const [comentarios, setcomentarios] = useState([]);
+  const [comentarios, setComentarios] = useState([]);
   //Compartir este estado en el contexto
 
 
@@ -85,7 +85,8 @@ function App() {
                                    listaUsuarios, 
                                    orden, setOrden, 
                                    hamburguesasSort, setHamburguesasSort,
-                                   usuarioActual, setUsuarioActual}}>
+                                   usuarioActual, setUsuarioActual,
+                                   comentarios, setComentarios}}>
 
 
       <BrowserRouter>
@@ -103,7 +104,7 @@ function App() {
         {conectado && 
           <> 
             <Route path="/favoritos" element={<Favoritos></Favoritos>}></Route>
-            <Route path="/perfil/:id" element={<Perfil></Perfil>}></Route>
+            <Route path="/perfil" element={<Perfil></Perfil>}></Route>
             <Route path="/comentarios" element={<Comentarios></Comentarios>}></Route>
           </>
         }
