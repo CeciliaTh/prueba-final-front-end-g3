@@ -9,19 +9,20 @@ import MiContexto from '../Contexto/MiContexto';
 const Barraprivada = () => {
 
     const setActiveClass = ({ isActive }) => (isActive ? "active" : "no-active");
-    const {setConectado} = useContext(MiContexto);
+    const {setConectado, usuarioActual} = useContext(MiContexto);
 
     const cerrarsesion = ()=> {
       setConectado(false)
     }
 
-
     return (
       <div className='barra1'>
+        <header className='bg-dark w-100 py-2 px-3 d-flex justify-content-end'><span className="text-light">¡Hola, <b>{usuarioActual.nombre}!</b> </span></header>
         <Navbar className='barra' expand="lg">
           <Container>
             <NavLink to="/"><Navbar.Brand className='logo2'>BurgerTown</Navbar.Brand></NavLink>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='navtoggle' />
+
             <Navbar.Collapse id="basic-navbar-nav" className='navtoggle'>
               <Nav className="ms-auto">
 
