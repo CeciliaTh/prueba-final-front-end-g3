@@ -1,43 +1,46 @@
 [
     {
-      "usuario": "carlosdg",
       "nombre": "Carlos Garcia",
       "email": "carlosdavid@gmail.com",
       "telefono": "98765432",
       "clave":"1234",
       "id": 1,
       "favoritos":[],
-      "comentarios":[]
+      "comentarios":[],
+      "direccion":"las acacias, la florida"
     },
     {
-        "usuario": "ceciliath",
         "nombre": "Cecilia Thielemann",
         "email": "cecilia@gmail.com",
         "telefono": "97765432",
         "clave":"5432",
         "id": 2,
         "favoritos":[],
-        "comentarios":[]
+        "comentarios":[],
+        "direccion":"mujica,ñuñoa"
+
       },
       {  
-        "usuario": "victoroll",
         "nombre": "Victor Ollarves",
         "email": "victor@gmail.com",
         "telefono": "98865432",
         "clave":"4321",
         "id": 3,
         "favoritos":[],
-        "comentarios":[]
+        "comentarios":[],
+        "direccion":"padre alonso de ovalle, santiago"
+
       },
 
-      { "usuario": "leocastillo",
+      { 
         "nombre": "Leonardo Castillo",
         "email": "leonardojose@gmail.com",
         "telefono": "98765432",
         "clave":"1245",
         "id": 4,
         "favoritos":[],
-        "comentarios":[]
+        "comentarios":[],
+        "direccion":""
       }
 
   ]
