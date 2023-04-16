@@ -3,6 +3,7 @@ import MiContexto from "../Contexto/MiContexto";
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { totalPago } from '../Funciones/TotalPago.jsx';
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 const Carrito = () => {
 
@@ -39,10 +40,10 @@ const Carrito = () => {
   });
 
   return (
-<div className='cartcss'>
+    <div className='cartcss mb-5'>
       <h2 className="text-center text-white"> DETALLE DEL PEDIDO </h2>
-      <div className=' text-white m-auto p-3 border border-warning justify-content-between'>
-     
+      <div className=' text-white m-auto p-3 border border-warning justify-content-between text-center'>
+
         <div className="row" >
           <div className="col" >
             <h5><strong>Imagen</strong></h5>
@@ -60,52 +61,52 @@ const Carrito = () => {
           </div>
 
         </div>
-      
+
       </div>
 
       {
         burgerSeleccionada.length === 0 ? <div className="p-4"><div className="alert alert-info text-center" role="alert">
-        ¡No hay hamburguesas en tu carrito!
-      </div></div> :
-        burgerSeleccionada.map((bs, i) => {
-          return (
-<div key={i} className='text-white m-auto p-3 border border-warning'>
-         <div className="row mb-2 pb-2" >
-       <div className="col" >
-       <img src={bs.imagen} alt={bs.nombre} width="75" />
-       </div>
-       <div className="col">
-         <p><NavLink to={`/detalle/${bs.id}`}>{bs.nombre}</NavLink></p> 
-       </div>
-       <div className="col">
-         <p>$ {bs.precio.toLocaleString({
-           style: "currency",         
-           currency: "CPL"
-        })}.-</p>
-       </div>
-       <div className="col">
-         <p>$ {(Number(bs.precio) * bs.cantidad).toLocaleString({
-                style: "currency",
-                currency: "CPL"
-              })}.-</p>
-       </div>
-       <div className="col">
-       <div className="d-flex justify-content-around">
-                <Button variant="danger" onClick={() => quitarHamburguesa(bs.id)}>➖</Button><p className='px-2'>{bs.cantidad}</p><Button variant="primary" onClick={() => sumarHamburguesa(bs.id)}>➕</Button>
-            </div>
-       </div>
+          ¡No hay hamburguesas en tu carrito!
+        </div></div> :
+          burgerSeleccionada.map((bs, i) => {
+            return (
+              <div key={i} className='text-white border border-warning text-center'>
+                <div className="row my-2" >
+                  <div className="col" >
+                    <img src={bs.imagen} alt={bs.nombre} width="75" />
+                  </div>
+                  <div className="col fs-5 my-auto">
+                    <p><NavLink to={`/detalle/${bs.id}`} className='textosCarrito' >{bs.nombre}</NavLink></p>
+                  </div>
+                  <div className="col fs-5 ps-5 my-auto">
+                    <p>$ {bs.precio.toLocaleString({
+                      style: "currency",
+                      currency: "CPL"
+                    })}.-</p>
+                  </div>
+                  <div className="col fs-5 my-auto">
+                    <p>$ {(Number(bs.precio) * bs.cantidad).toLocaleString({
+                      style: "currency",
+                      currency: "CPL"
+                    })}.-</p>
+                  </div>
+                  <div className="col my-auto">
+                    <div className="d-flex justify-content-around">
+                      <Button variant="danger" onClick={() => quitarHamburguesa(bs.id)}><FaMinus className=""></FaMinus></Button><p className='px-2 my-2'>{bs.cantidad}</p><Button variant="primary" onClick={() => sumarHamburguesa(bs.id)}><FaPlus></FaPlus></Button>
+                    </div>
+                  </div>
 
-     </div>
-   
-   </div>
-           )
-        })
+                </div>
+
+              </div>
+            )
+          })
       }
-      <h3 className=' text-white border border-warning'>Total Pedido: <strong>$ {monedaCarrito}.-</strong></h3>
-      <Button variant="success" >Ir a pagar</Button>
+      <h3 className=' text-white border border-warning mt-4'>Total Pedido: <strong>$ {monedaCarrito}.-</strong></h3>
+      <Button variant='warning' className='mt-3 fw-bold'>Ir a pagar</Button>
     </div>
-  
- 
+
+
   )
 
 }

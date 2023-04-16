@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useContext } from "react";
 import MiContexto from "../Contexto/MiContexto";
+import Smile from '../Animacion/Smile.json';
+import Lottie from 'lottie-react';
 
 
 const Perfil = () => {
@@ -39,9 +41,10 @@ const Perfil = () => {
 
   return (
     <div className='perfilcss-container'>
-
+<Lottie animationData={Smile}/>
       <div className='perfilcss'>
-        <h4>¡Bienvenido/a {usuarioActual.nombre}! </h4>
+        
+        <h2>¡Bienvenido/a {usuarioActual.nombre}! </h2>
         <h5>Aquí puedes modificar tus datos</h5>
         <form>
           <input type='text' onChange={(event) => setNombre(event.target.value)} placeholder='nombre' value={nombre}></input>
@@ -61,3 +64,6 @@ const Perfil = () => {
 }
 
 export default Perfil
+
+// cosas a instalar:
+// npm i lottie-react --legacy-geer-deps
