@@ -71,10 +71,10 @@ const Detalle = () => {
       {
         
         conectado ? 
-        <form onSubmit={comentar} className='d-flex flex-column justify-content-center align-items-center p-5 w-100 '>
-        <textarea className='w-100' id="textareacomentario" onKeyUp={e => setComentario(e.target.value)} required name="comentario" placeholder='Escribe aquí tu comentario' rows={4}></textarea>
+        <form onSubmit={comentar} className='d-flex flex-column justify-content-center align-items-center p-5 w-100'>
+        <textarea className='w-50' id="textareacomentario" onKeyUp={e => setComentario(e.target.value)} required name="comentario" placeholder='Escribe aquí tu comentario' rows={4}></textarea>
         <div className='p-4'>
-        <button className='btn btn-primary'>Comentar</button>
+        <button className='btn btn-warning'>Comentar</button>
         </div>
            </form> 
            : null
