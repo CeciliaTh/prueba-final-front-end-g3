@@ -82,7 +82,7 @@ function App() {
                                   burgerSeleccionada, setBurgerSeleccionada,
                                    totalSeleccionadas, setTotalSeleccionadas, 
                                    conectado, setConectado, 
-                                   listaUsuarios, 
+                                   listaUsuarios, setListausuarios,
                                    orden, setOrden, 
                                    hamburguesasSort, setHamburguesasSort,
                                    usuarioActual, setUsuarioActual,
