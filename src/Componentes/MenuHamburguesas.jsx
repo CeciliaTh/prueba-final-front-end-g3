@@ -49,8 +49,8 @@ setHamburguesasSort([...hamburguesaFiltrada])
 }
   return (
     
-    <div className="container-general">
-      <div className=" d-flex mb-4 gap-4">
+    <div className="container-general mt-5">
+      <div className="d-flex mb-4 gap-4 seleccionFiltro">
         <select name="select-orden" className="form-control" onChange={(e) => ordenarHamburguesas(e.target.value)}>
           <option value="op">Selecciona una opción</option>
           <option value="precioAsc">Ordenar por precio (menor a mayor)</option>

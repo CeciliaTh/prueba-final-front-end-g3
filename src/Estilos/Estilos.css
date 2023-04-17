@@ -8,7 +8,7 @@
     color:#ffffff;
     margin-left: 1em;
     text-decoration: none;
-    font-size:20px;
+    font-size: 1.5em;
     font-weight: bold;
     text-shadow: 
         0 0 7px #fff,
@@ -44,15 +44,23 @@
     width: 100%;
     height: 6.5rem;
     letter-spacing: 0.5px;
+    
 }
+
 .barra-scrolled{
   background-color: #010a01;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
+.carrito:hover{
+  transform: rotate(-25deg)
+  scale3d(1.8,1.8,1.8);
+  transition: all .3s;
+}
 .navtoggle {
     color: #ffffff;
 }
+
 .logo{
     color:#fff;
     font-family: Tahoma, sans-serif;
@@ -337,9 +345,7 @@
 /* // ESTILOS CARRITO */
 
 .cartcss {
-  padding-top: 15rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding: 18%;
   height: 80vh;
 }
 
@@ -451,7 +457,14 @@
   justify-content: center;
   align-items: center;
 }
-
+.form1 input{
+  color: #fff;
+  background: transparent;
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
   /* ESTILOS COMENTARIOS*/
   .comentarios-css{
     min-height: 80vh;
@@ -545,7 +558,7 @@
   justify-content: center;
   align-items: center;
   margin-top: auto; 
-
+  width: 100%;
 }
 
 .footercss > * {
@@ -562,19 +575,27 @@
 
 @media (max-width: 880px) {
 
+
   .menu-container {
     grid-template-columns: repeat(2, 1fr);
     
   }
-
+  .seleccionFiltro{
+    flex-direction: column;
+    text-align: center;
+  }
   .footercss {
-    
     height: 50vh;
+    min-width: 100%;
     flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
   }
   .barra {
     position: relative;
+  }
+  .navbarFiltro{
+    background-color: #333;
   }
   .card-container {
     margin-top: 10rem;
@@ -587,15 +608,24 @@
   }
   .cartcss {
     margin-top: 5rem;
+    height: 100%;
   }
-
+  .pedido{
+    display: none;
+  }
   .cartcss div {
     min-width: 100%;
   }
 
   .login-view {
     margin-top: 8rem;
+    max-width: 80%;
+    margin: 5rem auto;
 
+  }
+  .login-box{
+    background-color: transparent;
+    border-color: transparent;
   }
   .registro-container {
     margin-top: 5rem;
@@ -606,7 +636,26 @@
   .registrocss > * {
     min-width: 100vw;
   }
-
+  .perfilcss-container {
+    height: 90vh;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .form1 input{
+    color: #fff;
+    background: transparent;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+  }
+  .buttonLogin{
+    color: black;
+    background-color: #FFC300;
+  }
   
   .carrito-detalle {
 
@@ -617,15 +666,16 @@
   .favoritos-container {
     margin-top: 10rem;
   }
-
-
 }
 
 @media (max-width: 550px) {
   .menu-container {
     grid-template-columns: 1fr;
   }
-
+  .seleccionFiltro{
+    flex-direction: column;
+    text-align: center;
+  }
   body {
     background-repeat: repeat;
 
@@ -634,9 +684,40 @@
   .login-box {
 
     min-width: 100vw;
-
   }
-
+  .perfilcss-container {
+    height: 80vh;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .form1 input{
+    color: #fff;
+    background: transparent;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+  }
+  .buttonLogin{
+    color: black;
+    background-color: #FFC300;
+  }
+  .cartcss {
+    margin-top: 5rem;
+    height: 100%;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footercss {
+    height: 50vh;
+    min-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+  }
    
 }
 

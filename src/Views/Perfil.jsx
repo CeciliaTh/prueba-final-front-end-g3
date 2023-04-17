@@ -41,12 +41,12 @@ const Perfil = () => {
 
   return (
     <div className='perfilcss-container'>
-<Lottie animationData={Smile}/>
+        <Lottie animationData={Smile}/>
       <div className='perfilcss'>
         
         <h2>¡Bienvenido/a {usuarioActual.nombre}! </h2>
-        <h5>Aquí puedes modificar tus datos</h5>
-        <form>
+        <h5>Modifica tus datos</h5>
+        <form className='form1'>
           <input type='text' onChange={(event) => setNombre(event.target.value)} placeholder='nombre' value={nombre}></input>
           <input type='text' onChange={(event) => setEmail(event.target.value)} placeholder='email' value={email}></input>
           <input type='password' onChange={(event) => setPassword(event.target.value)} placeholder='password' value={password}></input>
@@ -55,7 +55,7 @@ const Perfil = () => {
         </form>
       </div>
       <div>
-        <button onClick={()=>actualizarDatos()}>Guardar</button>
+        <button onClick={()=>actualizarDatos()} className='mt-3 buttonLogin'>Guardar</button>
       </div>
 
 
