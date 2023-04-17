@@ -44,7 +44,7 @@ const Carrito = () => {
       <h2 className="text-center text-white"> DETALLE DEL PEDIDO </h2>
       <div className=' text-white m-auto p-3 border border-warning justify-content-between text-center'>
 
-        <div className="row" >
+        <div className="row pedido" >
           <div className="col" >
             <h5><strong>Imagen</strong></h5>
           </div>
@@ -75,7 +75,7 @@ const Carrito = () => {
                   <div className="col" >
                     <img src={bs.imagen} alt={bs.nombre} width="75" />
                   </div>
-                  <div className="col fs-5 my-auto">
+                  <div className="col fs-5 ">
                     <p><NavLink to={`/detalle/${bs.id}`} className='textosCarrito' >{bs.nombre}</NavLink></p>
                   </div>
                   <div className="col fs-5 ps-5 my-auto">
@@ -84,13 +84,13 @@ const Carrito = () => {
                       currency: "CPL"
                     })}.-</p>
                   </div>
-                  <div className="col fs-5 my-auto">
+                  <div className="col fs-5 ">
                     <p>$ {(Number(bs.precio) * bs.cantidad).toLocaleString({
                       style: "currency",
                       currency: "CPL"
                     })}.-</p>
                   </div>
-                  <div className="col my-auto">
+                  <div className="col ">
                     <div className="d-flex justify-content-around">
                       <Button variant="danger" onClick={() => quitarHamburguesa(bs.id)}><FaMinus className=""></FaMinus></Button><p className='px-2 my-2'>{bs.cantidad}</p><Button variant="primary" onClick={() => sumarHamburguesa(bs.id)}><FaPlus></FaPlus></Button>
                     </div>
