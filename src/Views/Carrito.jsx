@@ -40,8 +40,8 @@ const Carrito = () => {
   });
 
   return (
-    <div className='cartcss mb-5'>
-      <h2 className="text-center text-white"> DETALLE DEL PEDIDO </h2>
+    <div className='cartcss'>
+      <h2 className="text-center text-white pb-4"> DETALLE DEL PEDIDO </h2>
       <div className=' text-white m-auto p-3 border border-warning justify-content-between text-center'>
 
         <div className="row pedido" >

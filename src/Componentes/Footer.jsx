@@ -30,7 +30,7 @@ const Footer = () => {
 
       <div>
 
-        <h4>Sobre nosotros</h4>
+        <h4 className='text-break'>Sobre nosotros</h4>
         Somos un nuevo restaurante dedicado a llevar hasta tu casa las mejores hamburguesas de la ciudad.
 
       </div>
