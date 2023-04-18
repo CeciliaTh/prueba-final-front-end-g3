@@ -297,7 +297,6 @@
 }
 
 
-
 /* DETALLE HAMBURGUESA */
 
 .detalle-container {
@@ -345,8 +344,10 @@
 /* // ESTILOS CARRITO */
 
 .cartcss {
-  padding: 18%;
-  height: 80vh;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  min-height: 80vh;
 }
 
 
@@ -451,12 +452,13 @@
 /*ESTILOS PERFIL*/
 
 .perfilcss-container {
-  height: 80vh;
+  min-height: 80vh;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .form1 input{
   color: #fff;
   background: transparent;
@@ -465,6 +467,7 @@
   border-bottom: 1px solid #fff;
   outline: none;
 }
+
   /* ESTILOS COMENTARIOS*/
   .comentarios-css{
     min-height: 80vh;
@@ -548,17 +551,18 @@
   color: white;
   text-align: center;
 }
-/* ESTILOS FOOTER */
+/* ESTILOS FOOTER FUERA DE MEDIA QUERI*/
 
 .footercss {
   background-color: #FFC300;
   display: flex;
-  height: 20vh;
+  min-height: 20vh;
   padding: 2%;
   justify-content: center;
   align-items: center;
   margin-top: auto; 
-  width: 100%;
+  min-width: 100%;
+
 }
 
 .footercss > * {
@@ -573,19 +577,23 @@
 
 /* RESPONSIVE MEDIA QUERIES */
 
-@media (max-width: 880px) {
+/* TAMAÑO PEQUEÑO */
+
+@media (max-width:550px) {
 
 
   .menu-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     
   }
-  .seleccionFiltro{
+  /* .seleccionFiltro{
     flex-direction: column;
     text-align: center;
-  }
+  } */
+
+
   .footercss {
-    height: 50vh;
+    min-height: 50vh;
     min-width: 100%;
     flex-wrap: wrap;
     flex-direction: column;
@@ -607,7 +615,7 @@
     min-width: 100vw;
   }
   .cartcss {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     height: 100%;
   }
   .pedido{
@@ -627,6 +635,7 @@
     background-color: transparent;
     border-color: transparent;
   }
+  
   .registro-container {
     margin-top: 5rem;
   }
@@ -637,7 +646,7 @@
     min-width: 100vw;
   }
   .perfilcss-container {
-    height: 90vh;
+    min-height: 90vh;
     color: white;
     flex-direction: column;
     text-align: center;
@@ -668,31 +677,46 @@
   }
 }
 
-@media (max-width: 550px) {
+/* TAMAÑO GRANDE */
+@media  (min-width:551px) {
+ 
   .menu-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
-  .seleccionFiltro{
+  /* .seleccionFiltro{
     flex-direction: column;
     text-align: center;
-  }
+  } */
+  
   body {
     background-repeat: repeat;
 
   }
 
   .login-box {
-
-    min-width: 100vw;
+    /* min-width: 100vw; */
+    background-color: transparent;
+    border-color: transparent;
   }
+  
+
   .perfilcss-container {
-    height: 80vh;
+    /* min-height: 90vh;
     color: white;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center; */
+
+    min-height: 80vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
+
   .form1 input{
     color: #fff;
     background: transparent;
@@ -701,26 +725,53 @@
     border-bottom: 1px solid #fff;
     outline: none;
   }
-  .buttonLogin{
-    color: black;
-    background-color: #FFC300;
-  }
+  
+
   .cartcss {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     height: 100%;
     grid-template-columns: 1fr;
     text-align: center;
   }
   .footercss {
-    height: 50vh;
+    /* min-height: 50vh;
     min-width: 100%;
     flex-wrap: wrap;
     flex-direction: column;
-    text-align: center;
+    text-align: center; */
+
+    background-color: #FFC300;
+    display: flex;
+    min-height: 20vh;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; 
+    min-width: 100%;
   }
    
+  /* LOGIN VIEW ESTILOS MIN551PX*/
+
+.login-view {
+  padding: 15%;
+  display: flex;
+  justify-content: center;
 }
 
+.login-box {
+  background-color: #333;
+  border: 1px solid white;
+  border-radius: 10px;
+  max-width: 40vw;
+  padding: 3%;
+}
+
+}
+
+.buttonLogin{
+  color: black;
+  background-color: #FFC300;
+} 
 
 /* IMAGEN ICONOS WS, INSTAGRAM */
 .imgws {

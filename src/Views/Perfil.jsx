@@ -42,7 +42,8 @@ const Perfil = () => {
   return (
     <div className='perfilcss-container'>
         <Lottie animationData={Smile}/>
-      <div className='perfilcss'>
+      {/* <div className='perfilcss'> */}
+      <div>
         
         <h2>¡Bienvenido/a {usuarioActual.nombre}! </h2>
         <h5>Modifica tus datos</h5>
@@ -54,8 +55,8 @@ const Perfil = () => {
           <input type='text' onChange={(event) => SetDireccion(event.target.value)} placeholder='dirección' value={direccion}></input>
         </form>
       </div>
-      <div>
-        <button onClick={()=>actualizarDatos()} className='mt-3 buttonLogin'>Guardar</button>
+      <div className='pb-4'>
+        <button className='mt-3 buttonLogin' onClick={()=>actualizarDatos()}>Guardar</button>
       </div>
 
 
